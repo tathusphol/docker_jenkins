@@ -8,7 +8,8 @@ services:
       context: ./devtool_backend
         # Name of the dockerfile
       dockerfile: Dockerfile
-    container_name: backend_image
+      image: tathus/img_backend:lastest
+    container_name: backend
     ports:
        # Host port:Container port
       - '4000:4000'
@@ -19,7 +20,8 @@ services:
       context: ./devtool_frontend
         # Name of the dockerfile
       dockerfile: Dockerfile
-    container_name: frontend-image
+      image: tathus/img_frontend:lastest
+    container_name: frontend
     ports:
      # Host port:Container port
       - '3000:3000'
