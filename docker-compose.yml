@@ -1,0 +1,26 @@
+# Version of Docker-compose
+version: '3.9'
+services:
+  # Add the node-js service
+  node:
+  # Location to the node.js dockerfile
+    build: 
+      context: ./devtool_backend
+        # Name of the dockerfile
+      dockerfile: Dockerfile
+    container_name: backend_image
+    ports:
+       # Host port:Container port
+      - '4000:4000'
+   
+  react:
+  # Location to the react.js dockerfile
+    build: 
+      context: ./devtool_frontend
+        # Name of the dockerfile
+      dockerfile: Dockerfile
+    container_name: frontend-image
+    ports:
+     # Host port:Container port
+      - '3000:3000'
+    stdin_open: true
