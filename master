@@ -27,7 +27,7 @@ pipeline{
         }
         stage("wake slave"){
             steps{
-                build job: 'slave' 
+                build job: 'slave_docker' 
             } 
         }
     }
